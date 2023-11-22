@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   <!-- <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <h1>User Dashboard</h1>
+        <div class="user-info">
+            <h2>User Information</h2>
+            <p>Name: <span id="userName">[User Name]</span></p>
+            <p>Address: <span id="userAddress">[User Address]</span></p>
+            <p>Private Key: <span id="userPrivateKey">[User Private Key]</span></p>
+        </div>
+        <div class="actions">
+            <button id="addPropertyBtn">Add a Property</button>
+            <button id="askPropertyInfo">Ask Information for Property</button>
+        </div>
+    </div>
+        <!-- Add Property Modal -->
+    <div id="addPropertyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add a Property</h3>
+            <input type="text" id="addPropertyAddress" placeholder="Your Address">
+            <input type="text" id="addPropertyId" placeholder="Property ID">
+            <button id="submitAddProperty">Submit</button>
+        </div>
+    </div>
+
+    <!-- Ask Information for Property Modal -->
+    <div id="askPropertyInfoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Ask Information for Property</h3>
+            <input type="text" id="askPropertyAddress" placeholder="Address">
+            <input type="text" id="askPropertyId" placeholder="Property ID">
+            <button id="submitAskPropertyInfo">Submit</button>
+        </div>
+    </div>
+
+    <script src="user-page.js"></script>
+</body>
+</html>
+
