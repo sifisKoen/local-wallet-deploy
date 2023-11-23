@@ -1,33 +1,41 @@
-# local-wallet-deploy
-This is repository where I have upload a local smart wallet. 
+# Local Wallet Deploy
 
-The project is build on a *vyper* smart contract, *javascript* and *pyhon flask* using it as the local server.
+## Introduction
+This repository contains a local smart wallet project built with Vyper, JavaScript, and Python Flask. It's designed to interact with a blockchain using a simple front-end and a local server to execute commands.
 
-## Technology
+### Technologies
+* Vyper: Smart contract language used for blockchain interaction.
+* JavaScript and HTML: For building the user interface.
+* Python Flask: To set up a local server for command execution.
+* Foundry Toolchain: For blockchain infrastructure, including:
+    * Anvil: To create a local/test blockchain.
+    * Cast Command: To deploy and interact with the smart contract.
 
-* I used **Vyper** as my smart contract language.
-* Javascript and HTML used for a simple front-end application for the user interaction with the blockchain.
-* Python Flask used for a very simple local server so the user will be able to run **cmd** commands in the machine where the server runs.
-* Last but not least for the Blockchain infrastraction I used **Foundry** tool chain, and more specifically:
-      * **Anvil** so to create the local/test blockchain to our machine.
-      * And **cast** command so to deploy our smart contract to our blockchain and to call some functions of our smart contract.
+### Pre-requisites
+* Foundry Toolchain
+* Python 3
+* Web browser
 
-## How to run
+### Installation
+1. Clone the project: git clone [https://github.com/sifisKoen/local-wallet-deploy.git].
+2. Install Foundry Toolchain for local command execution.
 
-* First you need to clone this project to your local machine.
-* Then you need to install the foundry tool chain so you will be able to run the commands locally to your machine.
-  * Now you are ready to run your local blockchain using the `anvil` command witch will create a local blockchain to your machine.
-* After that you can go to `./HobbitProperties/webpage` and from there you can run your index.html.
-  * This page includes a QR code which allow the users to scan it and interact with the web frontend.
-* After you run the index.html you need to spin up the python flask server that will able us to run commands from the web interface to our local machine.
-  * To run the server need to go to `./HobbitProperties/webpage` and here you need to run `python3 main.py`
-* Perfect now you have your server running and you started your index.html and you have your anvil blockchain running locally to your machine.
-* Now we need to run the automated script witch you can find it under **HobbitProperties** directory you can run it using `./HobbitPropertyManager.sh`.
-  * This script it builded to make our life easier for running our commands.
-  * For this scenario we will use only the first option (1.) from our script (POSIX compliant).
-    * Here the script will ask us to add an address so you need to go back where your anvil blockchain is running and take one of the addresses anvil provides.
-* Now that we have deployed our smart contract we are ready to go again to our web interface.
-* From our index.html now we can scan the QR code, and then we will move to a page with some addresses you can copy one of the addresses there and click `Login` link.
-* Then you will see the log in web page where you can add your name and the copied address from before.
-* Now you can see your user page from where you can click to one of the buttons you can see in this page.
-* Each button executes different **function** of our smart contract and runs the related cmd command to our server (local machine).
+### How to Run
+1. Start Anvil: Use the anvil command to initiate a local blockchain.
+2. Web Frontend:
+    * Navigate to ./HobbitProperties/webpage.
+    * Open index.html in a web browser.
+    This page includes a QR code for easy access.
+3. Run Flask Server:
+    * Inside ./HobbitProperties/webpage, execute python3 main.py.
+4. Execute Script:
+    * Navigate to ./HobbitProperties.
+    * Run ./HobbitPropertyManager.sh.
+    * When prompted, use an address from the Anvil blockchain.
+5. Interact with Web Interface:
+    * Scan the QR code from index.html.
+    * Use the provided addresses to log in.
+    * Explore various functionalities through the user interface.
+
+### Contributions
+Feel free to contribute to this project! It's beginner-friendly and a great example of integrating different technologies for blockchain interaction.
